@@ -1,6 +1,15 @@
 # MSM-Server-Tools
 Tools for interacting with the MSM (My Singing Monsters) Servers made with ease of use in mind.
 
+### Use cases:
+* Downloading your player data incase your MSM doesn't work anymore
+* Downloading Databases if you want to make a private server
+* Learning about the way MSMs servers work
+
+### Do NOT use this program to
+* DDos MSM Servers (as it is a **[Cyber Crime](https://www.fbi.gov/contact-us/field-offices/anchorage/fbi-intensify-efforts-to-combat-illegal-ddos-attacks)**).
+* Do any harm to account data, servers, BBB employees, etc
+
 ## Links:
 [Settings](#settings)
 [Authorization](#authorization)
