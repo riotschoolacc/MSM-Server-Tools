@@ -4,6 +4,9 @@ Tools for interacting with the MSM (My Singing Monsters) Servers made with ease 
 [License](https://github.com/riotschoolacc/MSM-Server-Tools/LICENSE)
 [Security](https://github.com/riotschoolacc/MSM-Server-Tools/SECURITY.md)
 
+## Links:
+[Settings](#settings]
+
 Settings
 ------
 In MSM Server Tools there are multiple settings you can customize, for example, if you want to connect to your own custom server, set the custom server ip to `127.0.0.1` (localhost) or your own server ip, default: `null`.
