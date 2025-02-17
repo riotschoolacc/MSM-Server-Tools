@@ -49,7 +49,7 @@ Zone: `My Singing Monsters` or your [Custom Zone](#settings),
 
 Username which is the `user_game_id` from the Auth Request,
 Password which is the `password` from the Auth Request,
-and auth_info, which is an [SFSObject](https://github.com/MSM-Hacks/pyFox2X/tree/main/sfs_types/SFSObject) with params
+and auth_info, which is an [SFSObject](https://docs2x.smartfoxserver.com/api-docs/javadoc/server/com/smartfoxserver/v2/entities/data/SFSObject.html) with params
 
 Token: which is the responded `token` from a request to **https://auth.bbbgame.net/auth/api/token/** with most params being the response from the original Auth Request.
 Access Key which is a hardcoded key inside the My Singing Monsters EXE.
