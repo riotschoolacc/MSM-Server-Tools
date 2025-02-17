@@ -73,5 +73,8 @@ Access Key (`access_key`) which is a hardcoded key inside the My Singing Monster
 Client Version (`client_version`) which is the [current version of My Singing Monsters](https://mysingingmonsters.fandom.com/wiki/Version_History).
 
 After all of this, you should be logged into the MSM Servers now.
+
 > [!IMPORTANT]
 > You will need to click Login every few minutes to ensure you don't get kicked for being idle, also, note [this](https://github.com/riotschoolacc/MSM-Server-Tools/blob/main/README.md?plain=1#L36)
+
+You can read how to send and recieve requests [here](https://github.com/riotschoolacc/MSM-Server-Tools/Requests.md).
