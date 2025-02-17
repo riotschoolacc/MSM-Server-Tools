@@ -39,7 +39,7 @@ Oddly enough, it doesn't check how many accounts you've created on that IP if yo
 
 Pregame Setup
 ------
-After Authentication, the client sends a request to **https://msmpc.bbbgame.net/pregame_setup.php** with one param being the returned Auth Token from earlier. (mobile: **https://msm-auth.bbbgame.net/pregame_setup.php**)\n
+After Authentication, the client sends a request to **https://msmpc.bbbgame.net/pregame_setup.php** with one param being the returned Auth Token from earlier. (mobile: **https://msm-auth.bbbgame.net/pregame_setup.php**)
 Which in turn gives you a Server IP (`server_ip`) and Update Files Url (`content_url`).
 
 Login
@@ -51,13 +51,13 @@ To connect to the Server using the responded IP or [Custom Server IP](#settings)
 with params:
 Zone: `My Singing Monsters` or your [Custom Zone](#settings),
 Username which is the `user_game_id` from the Auth Request,
-Password which is the `password` from the Auth Request,]
-and auth_info, which is an [SFSObject](https://docs2x.smartfoxserver.com/api-docs/javadoc/server/com/smartfoxserver/v2/entities/data/SFSObject.html) with params
+Password which is the `password` from the Auth Request,
+and auth_info, which is an [SFSObject](https://docs2x.smartfoxserver.com/api-docs/javadoc/server/com/smartfoxserver/v2/entities/data/SFSObject.html) with params\n
 
-Token (`token`): which is the responded `token` from a request to **https://auth.bbbgame.net/auth/api/token/** with most params being the response from the original Auth Request.
-Access Key (`access_key`) which is a hardcoded key inside the My Singing Monsters EXE.
-Client Version (`client_version`) which is the [current version of My Singing Monsters](https://mysingingmonsters.fandom.com/wiki/Version_History).\n
+Token: which is the responded `token` from a request to **https://auth.bbbgame.net/auth/api/token/** with most params being the response from the original Auth Request.\n
+Access Key which is a hardcoded key inside the My Singing Monsters EXE.
+Client Version which is the [current version of My Singing Monsters](https://mysingingmonsters.fandom.com/wiki/Version_History).
 
 After all of this, you should be logged into the MSM Servers now.
 > [!IMPORTANT]
-> You will need to click Login every few minutes to ensure you don't get kicked for being idle, also, note [this](https://github.com/riotschoolacc/MSM-Server-Tools/README.md?plain=1#L36)
+> You will need to click Login every few minutes to ensure you don't get kicked for being idle.
