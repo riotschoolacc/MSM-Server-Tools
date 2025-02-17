@@ -15,10 +15,11 @@ Tools for interacting with the MSM (My Singing Monsters) Servers made with ease 
 
 Settings
 ------
-In MSM Server Tools there are multiple settings you can customize, for example, if you want to connect to your own custom server, set the custom server ip to `127.0.0.1` (localhost) or your own server ip, default: `null`.
+In MSM Server Tools there are multiple settings you can customize, for example, if you want to connect to your own custom server, set the custom server ip to for example `127.0.0.1` (localhost), default: `null`.
+
 Or, you can set your port to what your server supports, default: `9933`.
 
-You can find a full list of settings **[here](https://example.com).**
+You can find a full list of settings **[here](#list-of-settings).**
 
 > [!TIP]
 > You should keep all the *Main* Settings the same to avoid problems.
@@ -72,9 +73,29 @@ Access Key (`access_key`) which is a hardcoded key inside the My Singing Monster
 
 Client Version (`client_version`) which is the [current version of My Singing Monsters](https://mysingingmonsters.fandom.com/wiki/Version_History).
 
-After all of this, you should be logged into the MSM Servers now.
-
 > [!IMPORTANT]
 > You will need to click Login every few minutes to ensure you don't get kicked for being idle, also, note [this](https://github.com/riotschoolacc/MSM-Server-Tools/blob/main/README.md?plain=1#L36)
 
-You can read how to send and recieve requests [here](https://github.com/riotschoolacc/MSM-Server-Tools/Requests.md).
+Requests
+------
+My Singing Monsters uses [Smartfox2x](https://www.smartfoxserver.com/products/sfs2x) as their Client-Server structure, which allows for easy request sending and responding.
+
+In MSM Server Tools, after you [Login](#login) you are given 4 new elements to play with:
+
+* Request Name (You can find a list of all requests MSM requests and retrieves [here](#list-of-requests)
+
+* Params
+  * All params are required to be inputted as JSON which MSM Server Tools will convert to an SFSObject and send to the servers.
+
+* Sending
+  * Send (Wait)
+    * Send a request and wait for a response. (Will timeout based on your [settings](#settings) if not responded by then.) Usually used for retrieving game Databases in the loading screen such as `db_monster` which sends the user all Monster Databases.
+    * Will log in the textbox the response once you get one.
+
+  * Send (No Wait)
+    * Send a request without waiting for a response. Usually used for actions such as `gs_update_structure` which updates a structure via its given user_structure_id.
+
+* Documentation
+  * Creates a window with documentation on how to send requests.
+ 
+For more information check out [The documentation of pyfox2x](https://github.com/MSM-Hacks/pyfox2x).
