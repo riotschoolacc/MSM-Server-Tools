@@ -1,14 +1,17 @@
-# MSM-Server-Tools
+# MSM Server Tools
 Tools for interacting with the MSM (My Singing Monsters) Servers made with ease of use in mind.
 
 ### Use cases:
 * Downloading your player data incase your MSM doesn't work anymore
 * Downloading Databases if you want to make a private server
 * Learning about the way MSMs servers work
+* Just for fun
 
 ### Do NOT use this program to
 * DDos MSM Servers (as it is a **[Cyber Crime](https://www.fbi.gov/contact-us/field-offices/anchorage/fbi-intensify-efforts-to-combat-illegal-ddos-attacks)**).
 * Do any harm to account data, servers, BBB employees, etc
+* Leak account data, upcoming updates, etc
+* Do anything that may seem illegal
 
 ## Links:
 [Settings](#settings)
@@ -17,10 +20,6 @@ Tools for interacting with the MSM (My Singing Monsters) Servers made with ease 
 
 [License](https://github.com/riotschoolacc/MSM-Server-Tools/blob/main/LICENSE)
 [Security](https://github.com/riotschoolacc/MSM-Server-Tools/blob/main/SECURITY.md)
-
-> [!CAUTION]
-> Creating too many accounts in a small time period (around 1000, from experience) **will** get you IP Banned from the My Singing Monsters servers for a couple of minutes.
-> But don't worry, you will be unbanned after around (from experience) 7 minutes.
 
 Settings
 ------
@@ -53,6 +52,10 @@ Anonymous = `anon`
 
 > [!WARNING]
 > You will need to re-authenticate every 10 minutes due to there being a Expiration Time inside the Token.
+
+> [!CAUTION]
+> Creating too many accounts in a small time period (around 1000, from experience) **will** get you IP Banned from the My Singing Monsters servers for a couple of minutes.
+> But don't worry, you will be unbanned after around (from experience) 7 minutes.
 
 Oddly enough, it doesn't check how many accounts you've created on that IP if you aren't on the mobile servers. But if you are using the mobile servers, it does check, and refuses to allow you to create more if you have multiple.
 
