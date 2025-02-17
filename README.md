@@ -3,7 +3,7 @@ Tools for interacting with the MSM (My Singing Monsters) Servers made with ease 
 
 ## Links:
 [Settings](#settings)
-[Authorization](#authorization]
+[Authorization](#authorization)
 
 Settings
 ------
