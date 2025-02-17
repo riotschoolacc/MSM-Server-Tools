@@ -74,7 +74,7 @@ Access Key (`access_key`) which is a hardcoded key inside the My Singing Monster
 Client Version (`client_version`) which is the [current version of My Singing Monsters](https://mysingingmonsters.fandom.com/wiki/Version_History).
 
 > [!IMPORTANT]
-> You will need to click Login every few minutes to ensure you don't get kicked for being idle, also, note [this](https://github.com/riotschoolacc/MSM-Server-Tools/blob/main/README.md?plain=1#L36)
+> You will need to click Login every few minutes to ensure you don't get kicked for being idle
 
 Requests
 ------
@@ -92,6 +92,6 @@ In MSM Server Tools, after you [Login](#login) you are given 4 new elements to p
   * Will log in the textbox the response once you get one.
 
 * Send (No Wait)
-  * Send a request without waiting for a response. Usually used for actions such as `gs_update_structure` which updates a structure via its given user_structure_id.
+  * Send a request without waiting for a response. You should usually use this for actions such as `gs_update_structure` which updates a structure via its given user_structure_id.
  
 For more information check out [The documentation of pyfox2x](https://github.com/MSM-Hacks/pyfox2x).
