@@ -29,8 +29,17 @@ In My Singing Monsters, before anything happens, the client sends a request to *
 
 In MSM Server Tools you will click Authorization before you can do anything else and it'll create a new account by sending a request to **https//auth.bbbgame.net/auth/api/anon_account** which creates a new *anonymous* account, and responds with a Username, Password, Account ID, User Game ID & Authorization Token. I'm not sure why theres 3 things for account identification.
 
-One of the params MSM sends to the URL is G (Game ID), Mobile MSM Servers are `1`, and PC MSM Servers are `27`,
-another is T (Login Type), Email = `email`, Anonymous = `anon` & Game Center = `gc`.
+One of the params MSM sends to the URL is G (Game ID), Mobile MSM Servers are `1`, 
+
+and PC MSM Servers are `27`,
+
+another is T (Login Type),
+
+Email = `email`, 
+
+Anonymous = `anon` 
+
+& Game Center = `gc`.
 
 > [!WARNING]
 > You will need to re-authenticate every 10 minutes due to there being a Expiration Time inside the Token.
