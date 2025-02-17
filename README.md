@@ -6,11 +6,11 @@ Tools for interacting with the MSM (My Singing Monsters) Servers made with ease 
 [Authorization](#authorization)
 [Login](#login)
 
-[License](https://github.com/riotschoolacc/MSM-Server-Tools/LICENSE)
-[Security](https://github.com/riotschoolacc/MSM-Server-Tools/SECURITY.md)
+[License](https://github.com/riotschoolacc/MSM-Server-Tools/blob/main/LICENSE)
+[Security](https://github.com/riotschoolacc/MSM-Server-Tools/blob/main/SECURITY.md)
 
 > [!CAUTION]
-> Creating too many accounts in a small time period (around 1000, from experience) **will** get you IP Banned from the My Singing Monsters servers for a couple of minutes.\n
+> Creating too many accounts in a small time period (around 1000, from experience) **will** get you IP Banned from the My Singing Monsters servers for a couple of minutes.
 > But don't worry, you will be unbanned after around (from experience) 7 minutes.
 
 Settings
@@ -39,7 +39,7 @@ Oddly enough, it doesn't check how many accounts you've created on that IP if yo
 
 Pregame Setup
 ------
-After Authentication, the client sends a request to **https://msmpc.bbbgame.net/pregame_setup.php** with one param being the returned Auth Token from earlier. (mobile: **https://msm-auth.bbbgame.net/pregame_setup.php**)
+After Authentication, the client sends a request to **https://msmpc.bbbgame.net/pregame_setup.php** with one param being the returned Auth Token from earlier. (mobile: **https://msm-auth.bbbgame.net/pregame_setup.php**)\n
 Which in turn gives you a Server IP (`server_ip`) and Update Files Url (`content_url`).
 
 Login
@@ -51,13 +51,13 @@ To connect to the Server using the responded IP or [Custom Server IP](#settings)
 with params:
 Zone: `My Singing Monsters` or your [Custom Zone](#settings),
 Username which is the `user_game_id` from the Auth Request,
-Password which is the `password` from the Auth Request,
-and auth_info, which is an [SFSObject](https://docs2x.smartfoxserver.com/api-docs/javadoc/server/com/smartfoxserver/v2/entities/data/SFSObject.html) with params\n
+Password which is the `password` from the Auth Request,]
+and auth_info, which is an [SFSObject](https://docs2x.smartfoxserver.com/api-docs/javadoc/server/com/smartfoxserver/v2/entities/data/SFSObject.html) with params
 
-Token: which is the responded `token` from a request to **https://auth.bbbgame.net/auth/api/token/** with most params being the response from the original Auth Request.\n
-Access Key which is a hardcoded key inside the My Singing Monsters EXE.
-Client Version which is the [current version of My Singing Monsters](https://mysingingmonsters.fandom.com/wiki/Version_History).
+Token (`token`): which is the responded `token` from a request to **https://auth.bbbgame.net/auth/api/token/** with most params being the response from the original Auth Request.
+Access Key (`access_key`) which is a hardcoded key inside the My Singing Monsters EXE.
+Client Version (`client_version`) which is the [current version of My Singing Monsters](https://mysingingmonsters.fandom.com/wiki/Version_History).\n
 
 After all of this, you should be logged into the MSM Servers now.
 > [!IMPORTANT]
-> You will need to click Login every few minutes to ensure you don't get kicked for being idle.
+> You will need to click Login every few minutes to ensure you don't get kicked for being idle, also, note [this](https://github.com/riotschoolacc/MSM-Server-Tools/blob/main/README.md?plain=1#L36)
