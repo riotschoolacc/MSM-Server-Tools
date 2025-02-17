@@ -2,11 +2,11 @@
 Tools for interacting with the MSM (My Singing Monsters) Servers made with ease of use in mind.
 
 ## Links:
-[Settings](#settings)\n
-[Authorization](#authorization)\n
-[Login](#login)\n
+[Settings](#settings)
+[Authorization](#authorization)
+[Login](#login)
 
-[License](https://github.com/riotschoolacc/MSM-Server-Tools/LICENSE)\n
+[License](https://github.com/riotschoolacc/MSM-Server-Tools/LICENSE)
 [Security](https://github.com/riotschoolacc/MSM-Server-Tools/SECURITY.md)
 
 > [!CAUTION]
@@ -49,15 +49,15 @@ Once the Server IP is located, you should in MSM Server Tools click *Server Logi
 To connect to the Server using the responded IP or [Custom Server IP](#settings) and port `9933` (Default Smartfox2x port and the one MSMs Servers Use) or the [Custom Server Port](#settings). If its successful, MSM Server Tools will send a Login Request to the server,
 
 with params:
-Zone: `My Singing Monsters` or your [Custom Zone](#settings),\n
-Username which is the `user_game_id` from the Auth Request,\n
-Password which is the `password` from the Auth Request,]n
-and auth_info, which is an [SFSObject](https://docs2x.smartfoxserver.com/api-docs/javadoc/server/com/smartfoxserver/v2/entities/data/SFSObject.html) with params\n
+Zone: `My Singing Monsters` or your [Custom Zone](#settings),
+Username which is the `user_game_id` from the Auth Request,
+Password which is the `password` from the Auth Request,]
+and auth_info, which is an [SFSObject](https://docs2x.smartfoxserver.com/api-docs/javadoc/server/com/smartfoxserver/v2/entities/data/SFSObject.html) with params
 
-Token: which is the responded `token` from a request to **https://auth.bbbgame.net/auth/api/token/** with most params being the response from the original Auth Request.\n
-Access Key which is a hardcoded key inside the My Singing Monsters EXE.\n
-Client Version which is the [current version of My Singing Monsters](https://mysingingmonsters.fandom.com/wiki/Version_History).\n
+Token (`token`): which is the responded `token` from a request to **https://auth.bbbgame.net/auth/api/token/** with most params being the response from the original Auth Request.
+Access Key (`access_key`) which is a hardcoded key inside the My Singing Monsters EXE.
+Client Version (`client_version`) which is the [current version of My Singing Monsters](https://mysingingmonsters.fandom.com/wiki/Version_History).\n
 
 After all of this, you should be logged into the MSM Servers now.
 > [!IMPORTANT]
-> You will need to click Login every few minutes to ensure you don't get kicked for being idle.
+> You will need to click Login every few minutes to ensure you don't get kicked for being idle, also, note [this](https://github.com/riotschoolacc/MSM-Server-Tools/README.md?plain=1#L36)
