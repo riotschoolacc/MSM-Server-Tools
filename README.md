@@ -87,15 +87,11 @@ In MSM Server Tools, after you [Login](#login) you are given 4 new elements to p
 * Params
   * All params are required to be inputted as JSON which MSM Server Tools will convert to an SFSObject and send to the servers.
 
-* Sending
-  * Send (Wait)
-    * Send a request and wait for a response. (Will timeout based on your [settings](#settings) if not responded by then.) Usually used for retrieving game Databases in the loading screen such as `db_monster` which sends the user all Monster Databases.
-    * Will log in the textbox the response once you get one.
+* Send (Wait)
+  * Send a request and wait for a response. (Will timeout based on your [settings](#settings) if not responded by then.) Usually used for retrieving game Databases in the loading screen such as `db_monster` which sends the user all Monster Databases.
+  * Will log in the textbox the response once you get one.
 
-  * Send (No Wait)
-    * Send a request without waiting for a response. Usually used for actions such as `gs_update_structure` which updates a structure via its given user_structure_id.
-
-* Documentation
-  * Creates a window with documentation on how to send requests.
+* Send (No Wait)
+  * Send a request without waiting for a response. Usually used for actions such as `gs_update_structure` which updates a structure via its given user_structure_id.
  
 For more information check out [The documentation of pyfox2x](https://github.com/MSM-Hacks/pyfox2x).
