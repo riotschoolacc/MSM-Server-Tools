@@ -4,20 +4,24 @@ Tools for interacting with the MSM (My Singing Monsters) Servers made with ease 
 ### Use cases:
 * Making a custom client for My Singing Monsters
 * Downloading your player data incase your My Singing Monsters doesn't work anymore
-* Downloading Databases if you want to make a private server
 * Learning about the way MSMs servers work
 * Just for fun
 
 ### Do NOT use this program to
-* DDos MSM Servers (as it is a **[Cyber Crime](https://www.fbi.gov/contact-us/field-offices/anchorage/fbi-intensify-efforts-to-combat-illegal-ddos-attacks)**).
+* DDos MSM Servers (as it is a ***[Cyber Crime](https://www.fbi.gov/contact-us/field-offices/anchorage/fbi-intensify-efforts-to-combat-illegal-ddos-attacks)***).
 * Do any harm to account data, servers, BBB employees, etc
 * Leak account data, upcoming updates, etc
 * Do anything that may seem illegal
 
 ## Links:
+
 [Settings](#settings)
 [Authorization](#authorization)
 [Login](#login)
+[Loading Screen](#loading-screen)
+[Requests](#requests)
+
+**Legal**
 
 [License](https://github.com/riotschoolacc/MSM-Server-Tools/blob/main/LICENSE)
 [Security](https://github.com/riotschoolacc/MSM-Server-Tools/blob/main/SECURITY.md)
@@ -93,6 +97,12 @@ Client Version (`client_version`) which is the [current version of My Singing Mo
 > [!WARNING]
 > You will need to click Login every few minutes to ensure you don't get kicked for being idle
 
+Loading Screen
+------
+To be able to do any ingame (*after loading screen*) requests you have to go through the Loading Screen requests (for some reason, or else it yields on requests that aren't in the Loading Screen). 
+
+So, you can automatically do it without the hassle of manually typing all 30 request commands by clicking Loading Screen! You are given the option to download all responses into a folder if you want. Afterwards, you can do all requests.
+
 Requests
 ------
 My Singing Monsters uses [Smartfox2x](https://www.smartfoxserver.com/products/sfs2x) as their Client-Server structure, which allows for easy request sending and responding.
@@ -109,14 +119,8 @@ In MSM Server Tools, after you [Login](#login) you are given 4 new elements to p
   * Will log in the textbox the response once you get one.
 
 * Send (No Wait)
-  * Send a request without waiting for a response. You should usually use this for actions such as `gs_update_structure` which updates a structure via its given user_structure_id.
+  * Send a request without waiting for a response. You should usually use this for actions such as `gs_update_structure` which updates a structure via the sent param `user_structure_id`.
  
- Make sure to read [this](#loading-screen)!
+ Make sure to read [this](#loading-screen) before doing any requests!
  
-For more information, check out [The documentation of pyfox2x](https://github.com/MSM-Hacks/pyfox2x).
-
-Loading Screen
-------
-To be able to do any ingame (*after loading screen*) actions you have to go through the loading screen (for some reason, or else it yields on requests that aren't in the loading screen). 
-
-So, you can automatically do it without the hassle of manually typing all 30 request commands by clicking Loading Screen! You are given the option to download all responses into a folder if you want. Afterwards, you can do all requests.
+For more information on how requests work, check out [the documentation of pyfox2x](https://github.com/MSM-Hacks/pyfox2x).
