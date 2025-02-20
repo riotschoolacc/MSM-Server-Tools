@@ -66,12 +66,13 @@ After Authentication, the client sends a request to **https://msmpc.bbbgame.net/
 
 (mobile: **https://msm-auth.bbbgame.net/pregame_setup.php**)
 
-Which in turn gives you a Server IP (`server_ip`) and Update Files Url (`content_url`).
+Which in turn gives you one of the many Server IPs (`server_ip`) that MSM uses and an Update/DLC Files URL (`content_url`).
 
 Login
 ------
 Once the Server IP is located, you should in MSM Server Tools click *Server Login* which uses a wonderful [Smartfox2x implementation](https://github.com/MSM-Hacks/pyfox2x) made by **[MSM Hacks](https://github.com/MSM-Hacks)**.
 [English Documentation](https://github.com/mlnitoon2/pyfox2x)
+
 To connect to the Server using the responded IP or [Custom Server IP](#settings) and port `9933` (Default Smartfox2x port and the one MSMs Servers Use) or the [Custom Server Port](#settings). If it is successful, MSM Server Tools will send a Login Request to the server,
 
 with params:
@@ -83,9 +84,9 @@ Password which is the `password` from the Auth Request,
 
 and auth_info, which is an [SFSObject](https://docs2x.smartfoxserver.com/api-docs/javadoc/server/com/smartfoxserver/v2/entities/data/SFSObject.html) with params:
 
-Token (`token`): which is the responded `token` from a request to **https://auth.bbbgame.net/auth/api/token/** with most params being the response from the original Auth Request.
+Auth Token (`token`): which is the responded `token` from a request to **https://auth.bbbgame.net/auth/api/token/** with most params being the response from the original Auth Request.
 
-Access Key (`access_key`) which is a hardcoded key inside the My Singing Monsters EXE.
+Access Key (`access_key`) which is a hardcoded key inside the My Singing Monsters EXE. It changes every version.
 
 Client Version (`client_version`) which is the [current version of My Singing Monsters](https://mysingingmonsters.fandom.com/wiki/Version_History).
 
@@ -104,10 +105,18 @@ In MSM Server Tools, after you [Login](#login) you are given 4 new elements to p
   * All params are required to be inputted as JSON which MSM Server Tools will convert to an SFSObject and send to the servers.
 
 * Send (Wait)
-  * Send a request and wait for a response. (Will timeout based on your [settings](#settings) if not responded by then.) Usually used for retrieving game Databases in the loading screen such as `db_monster` which sends the user all Monster Databases.
+  * Send a request and wait for a response. (Will timeout and disconnect based on your [settings](#settings) if not responded by then.) Usually used for retrieving game Databases in the loading screen such as `db_monster` which sends the user all Monster Databases.
   * Will log in the textbox the response once you get one.
 
 * Send (No Wait)
   * Send a request without waiting for a response. You should usually use this for actions such as `gs_update_structure` which updates a structure via its given user_structure_id.
  
+ Make sure to read [this](#loading-screen)!
+ 
 For more information, check out [The documentation of pyfox2x](https://github.com/MSM-Hacks/pyfox2x).
+
+Loading Screen
+------
+To be able to do any ingame (*after loading screen*) actions you have to go through the loading screen (for some reason, or else it yields on requests that aren't in the loading screen). 
+
+So, you can automatically do it without the hassle of manually typing all 30 request commands by clicking Loading Screen! You are given the option to download all responses into a folder if you want. Afterwards, you can do all requests.
