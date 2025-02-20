@@ -3,7 +3,7 @@ Tools for interacting with the MSM (My Singing Monsters) Servers made with ease 
 
 ### Use cases:
 * Making a custom client for My Singing Monsters
-* Downloading your player data incase your My Singing Monsters doesn't work anymore
+* Downloading your player data
 * Learning about the way MSMs servers work
 * Just for fun
 
