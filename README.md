@@ -67,9 +67,6 @@ another is `t` (Login Type)
 | Anonymous | `anon` |
 | Game Center | `gc` |
 
-> [!WARNING]
-> You will need to re-authenticate every 10 minutes due to there being an Expiration Time inside the Token.
-
 > [!CAUTION]
 > Creating too many accounts in a short time period (around 1000, from experience) **will** get you IP Banned from the My Singing Monsters servers for a couple of minutes.
 > But don't worry, you will be unbanned after around (from experience) 7 minutes.
@@ -86,10 +83,8 @@ Which in turn gives you one of the many Server IPs (`server_ip`) that MSM uses a
 
 Login
 ------
-Once the Server IP is located, you should in MSM Server Tools click *Server Login* which uses a wonderful [Smartfox2x implementation](https://github.com/MSM-Hacks/pyfox2x) made by **[MSM Hacks](https://github.com/MSM-Hacks)**.
-[English Documentation](https://github.com/mlnitoon2/pyfox2x)
-
-To connect to the Server using the responded IP or [Custom Server IP](#settings) and port `9933` (Default Smartfox2x port and the one MSMs Servers Use) or the [Custom Server Port](#settings). If it is successful, MSM Server Tools will send a Login Request to the server,
+Once the Server IP is located, you should in MSM Server Tools click *Server Login* which uses a wonderful [Smartfox2x implementation](https://github.com/MSM-Hacks/pyfox2x) made by **[MSM Hacks](https://github.com/MSM-Hacks)**
+to connect to the Server using the responded IP *or [Custom Server IP](#settings)* and port `9933` *or the [Custom Server Port](#settings)*. If it is successful, MSM Server Tools should send a Login Request to the server
 
 with params:
 
@@ -99,13 +94,15 @@ with params:
 | `username` | the `user_game_id` from the Auth Request | `Utf-String` |
 | `password` | the `password` from the Auth Request | `Utf-String` |
 
-*and auth_info, which is an [SFSObject](https://docs2x.smartfoxserver.com/api-docs/javadoc/server/com/smartfoxserver/v2/entities/data/SFSObject.html) with params:
+* and `auth_info`, which is an [SFSObject](https://docs2x.smartfoxserver.com/api-docs/javadoc/server/com/smartfoxserver/v2/entities/data/SFSObject.html) with params:
 
 | Name | Description | Type |
 | --- | --- | --- |
-| `token` | the responded `token` from a request to **https://auth.bbbgame.net/auth/api/token/** with most params being the response from the original Auth Request. | `Utf-String` |
+| `token` | the responded `token` from a request to **https://auth.bbbgame.net/auth/api/token/** | `Utf-String` |
 | `access_key` | a hardcoded key inside the My Singing Monsters EXE. | `Utf-String` |
 | `client_version` | the [current version of My Singing Monsters](https://mysingingmonsters.fandom.com/wiki/Version_History). | `Utf-String` |
+
+[*English Documentation of PyFox2x*](https://github.com/mlnitoon2/pyfox2x)
 
 > [!WARNING]
 > You will need to click Login every few minutes to ensure you don't get kicked for being idle
@@ -114,13 +111,15 @@ Loading Screen
 ------
 To be able to do any ingame (*after loading screen*) requests you have to go through the Loading Screen requests (for some reason, or else it yields on requests that aren't in the Loading Screen). 
 
-So, you can automatically do it without the hassle of manually typing all the request commands by clicking Loading Screen! You are given the option to download all responses into a folder if you want. Afterwards, you can do all requests.
+So, you can automatically do it without the hassle of manually typing all the request commands by clicking Loading Screen! You are given the option to download all responses into a folder if you would like.
+
+Afterwards, you can do any request.
 
 Requests
 ------
 My Singing Monsters uses [Smartfox2x](https://www.smartfoxserver.com/products/sfs2x) as their Client-Server structure, which allows for easy request sending and responding.
 
-In MSM Server Tools, after you [Login](#login) you are given 4 new elements to play with:
+In MSM Server Tools, after you [Login](#login) you are given 5 new elements to play with:
 
 * Request Name (You can find a list of all requests MSM requests and retrieves [here](https://github.com/riotschoolacc/MSM-Server-Tools/blob/main/requests.md)
 
@@ -134,7 +133,12 @@ In MSM Server Tools, after you [Login](#login) you are given 4 new elements to p
 * Send (No Wait)
   * Send a request without waiting for a response. You should usually use this for actions such as `gs_update_structure` which updates a structure via the sent param `user_structure_id`.
   * You should only use *No Wait* if you aren't going to use the response.
+
+* Loading Screen
+  * [*Main section*](#loading-screen)
+
+You need to click Loading Screen before doing any in-game requests!
  
- Make sure to read [this](#loading-screen) before doing any requests!
- 
-For more information on how requests work, check out [the documentation of pyfox2x](https://github.com/MSM-Hacks/pyfox2x).
+For more information on how requests work, check out [the documentation of PyFox2x](https://github.com/MSM-Hacks/pyfox2x).
+
+[*English Documentation of PyFox2x*](https://github.com/mlnitoon2/pyfox2x)
