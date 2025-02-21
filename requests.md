@@ -56,6 +56,7 @@ Requests
 # Other Loading Screen Requests that aren't requested the Loading Screen
 * db_level
 * gs_sticker
+* gs_quest
 
 # Unused and/or Test Requests (None of these *require* params)
 
