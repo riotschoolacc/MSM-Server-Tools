@@ -63,11 +63,9 @@ Requests
 ## Eggs (All of these require params)
 
 * gs_buy_egg - `Purchases a Monster egg`
-
   * params: `(int) monster_id,` (not required) `(bool) starpower_purchase`, (not required) `(long) nursery_id` 
 
 * gs_hatch_egg - `Hatches and places a Monster`
-
   * params: `(long) user_egg_id`, `(int) pos_x`, `(int) pos_y`, `(int) flip`
 
 * gs_sell_egg
@@ -76,7 +74,6 @@ Requests
 ## Monster (All of these require params)
 
 * gs_sell_monster - `Sells Monster to market`
-
   * params: `(long) user_monster_id`
 
 * gs_rename_monster - `Renames a Monster`
@@ -91,7 +88,7 @@ Requests
 * gs_mute_monster - `Mutes a Monster`
   * params: `(long) user_monster_id`
 
-* gs_scale_monster - `Biggifys a Monster`
+* gs_mega_monster_message - `Biggifys a Monster`
   * params: `(long) user_monster_id`, (not required) `(bool) mega_enable`
 
 * gs_collect_monster - `Collects a Monsters coins`
@@ -144,6 +141,7 @@ Requests
 ## Account (Most of these require params)
 
 * gs_set_displayname - `Sets Players Display Name`
+  * params: `(utf-string) newName`
  
 * gs_player - `Sends Player Data`
   * No Params
