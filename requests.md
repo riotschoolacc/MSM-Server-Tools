@@ -1,66 +1,71 @@
 Requests
 -
 
-* All requests are sent with atleast one (but not required) param, `(Long) last_updated`, which is the `(Long) last_updated` in their cached version.
+* All requests are sent with atleast one (but not required) param, `(Long) last_updated`, which is the `(Long) last_updated` in their Cached version.
 
 ## Loading Screen Requests (None of these *require* params)
 
-* db_monster
+* db_monster - `Sends all Monster Data`
 
-* db_gene
+* db_gene - `Sends all Gene Data`
 
-* db_bakery_foods
+* db_bakery_foods - `Sends all Bakery Food Data`
 
-* db_structure
+* db_structure - `Sends all Structure Data`
 
-* db_island_v2
+* db_island_v2 - `Sends all Island Data`
 
-* db_scratch_offs
+* db_scratch_offs - `Sends all Scratch Minigame Data`
 
-* db_attuner_gene
+* db_attuner_gene - `Sends all Attuner Gene Data`
 
-* gs_quest
+* gs_timed_events - `Sends all current Limited-Time Events`
 
-* gs_timed_events
+* gs_rare_monster_data - `Sends all Monsters that are Rare`
 
-* gs_rare_monster_data
+* gs_epic_monster_data - `Sends all Monsters that are Epic`
 
-* gs_epic_monster_data
+* db_flexeggdefs - `Sends all Flex Egg Data`
 
-* db_flexeggdefs
+* gs_flip_boards - `Sends all Memory Minigame Boards`
 
-* gs_flip_boards
+* gs_flip_levels - `Sends all Memory Minigame Level Data`
 
-* gs_flip_levels
+* gs_monster_island_2_island_data - `Not sure..`
 
-* gs_monster_island_2_island_data
+* gs_cant_breed - `Sends all Monsters that cannot breed`
 
-* gs_cant_breed
+* db_battle - `Sends all Collosingum Data`
 
-* db_battle
+* db_battle_levels - `Sends all Collosingum Level Data`
 
-* db_battle_levels
+* db_battle_monster_training - `Sends all Collosingum Monster Training Data`
 
-* db_battle_monster_training
+* db_battle_monster_actions - `Sends all Collosingum Monster Actions`
 
-* db_battle_monster_actions
+* db_battle_monster_stats - `Sends all Collosingum Monster Statistics`
 
-* db_battle_monster_stats
+* db_battle_music - `Sends All Collosingum Music`
 
-* db_battle_music
+* db_costumes - `Sends all Costumes`
 
-* db_costumes
+* gs_player - `Sends Player Data`
 
-* gs_player
+# Other Loading Screen Requests that aren't requested
 
-# Other Loading Screen Requests that aren't requested in the Loading Screen
-* db_level
-* gs_sticker
-* gs_quest
+* db_level - `Sends all Level data`
 
-# Unused and/or Test Requests (None of these *require* params)
+* gs_sticker - `Sends all Avatar data`
 
-* test_types - `responds with a test of all SFS Types`
+* gs_quest - `Sends all Quests the player hasn't completed`
+
+# Test Requests (None of these *require* params)
+
+* test_types - `Sends a test of all SFS Types`
+
+# Deprecated Requests (None of these *require* params)
+
+* gs_island (First version of *gs_island_v2*) - `Sends all Island Data`
 
 # Ingame Requests
   
@@ -142,13 +147,10 @@ Requests
   * gs_collect_scratch_off - `Collects Scratch Minigame Rewards`
     * params varie depending on `type`
   
-  ## Account (Most of these require params)
+  ## Account (All of these require params)
   
   * gs_set_displayname - `Sets Players Display Name`
     * params: `(utf-string) newName`
-   
-  * gs_player - `Sends Player Data`
-    * No Params
   
   ## Settings Page (All of these require params)
   
