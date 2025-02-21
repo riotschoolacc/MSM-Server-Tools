@@ -53,7 +53,7 @@ Requests
 
 * gs_player
 
-# Other Loading Screen Requests that aren't requested the Loading Screen
+# Other Loading Screen Requests that aren't requested in the Loading Screen
 * db_level
 * gs_sticker
 * gs_quest
@@ -150,7 +150,7 @@ Requests
   * gs_player - `Sends Player Data`
     * No Params
   
-  ## Settings (All of these require params)
+  ## Settings Page (All of these require params)
   
   * gs_get_code - `For sending referral codes`
     * params: `(utf-string) code` **Must have "R:" at the start**
