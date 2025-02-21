@@ -109,17 +109,18 @@ My Singing Monsters uses [Smartfox2x](https://www.smartfoxserver.com/products/sf
 
 In MSM Server Tools, after you [Login](#login) you are given 4 new elements to play with:
 
-* Request Name (You can find a list of all requests MSM requests and retrieves [here](#list-of-requests)
+* Request Name (You can find a list of all requests MSM requests and retrieves [here](https://github.com/riotschoolacc/MSM-Server-Tools/blob/main/requests.md)
 
 * Params
-  * All params are required to be inputted as JSON which MSM Server Tools will convert to an SFSObject and send to the servers.
+*  All params are required to be inputted as JSON which MSM Server Tools will convert to an SFSObject and send to the servers. To specifically state which param should be which type (ex: Int, Double, String, Bool, etc) add the lowercase of it in the name. For example, if you want to send "monster_id" as an int, you should make your params look like this: `{"(int)monster_id": 3}`. Don't worry, it'll remove it from the string once its parsed.
 
 * Send (Wait)
   * Send a request and wait for a response. (Will timeout and disconnect based on your [settings](#settings) if not responded by then.) Usually used for retrieving game Databases in the loading screen such as `db_monster` which sends the user all Monster Databases.
-  * Will log in the textbox the response once you get one.
+  * Will log in the logs textbox the response once you get one.
 
 * Send (No Wait)
   * Send a request without waiting for a response. You should usually use this for actions such as `gs_update_structure` which updates a structure via the sent param `user_structure_id`.
+  * You should only use *No Wait* if you aren't going to use the response.
  
  Make sure to read [this](#loading-screen) before doing any requests!
  
