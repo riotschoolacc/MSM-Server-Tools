@@ -71,7 +71,6 @@ Requests
   * params: `(long) user_egg_id`, `(int) pos_x`, `(int) pos_y`, `(int) flip`
 
 * gs_sell_egg
-
   * params: `(long) user_monster_id`
 
 ## Monster (All of these require params)
@@ -80,10 +79,10 @@ Requests
 
   * params: `(long) user_monster_id`
 
-* gs_rename_monster - `Renames Monster`
+* gs_rename_monster - `Renames a Monster`
   * params: `(long) user_monster_id`, `(utf-string) name`
 
-* gs_move_monster - `Moves Monsters position`
+* gs_move_monster - `Moves a Monsters position`
   * params: `(int) pos_x`, `(int) pos_y`, `(double) volume`, `(long) user_monster_id`
 
 * gs_flip_monster - `Flips a Monster`
@@ -95,30 +94,36 @@ Requests
 * gs_scale_monster - `Biggifys a Monster`
   * params: `(long) user_monster_id`, (not required) `(bool) mega_enable`
 
-* gs_collect_monster - `Collects Monsters coins`
+* gs_collect_monster - `Collects a Monsters coins`
   * params: `(long) user_monster_id`
 
 ## Structure (All of these require params) 
 
-* gs_buy_structure
+* gs_buy_structure - `Purchases a Structure`
+  * params: `(int) pos_x`, `(int) pos_y`, `(double) scale`, `(int) structure_id`, `(int) flip`
 
-* gs_sell_structure
- 
-  * params: `(int) user_structure_id`
+* gs_sell_structure - `Sells a Structure`
+  * params: `(long) user_structure_id`
 
-* gs_start_upgrade_structure - `Starts Upgrading Structure`
-  * params: `(int) user_structure_id`
+* gs_start_upgrade_structure - `Starts upgrading a Structure`
+  * params: `(long) user_structure_id`
+
+* gs_move_structure - `Moves a Structure`
+  * params: `(int) pos_x`, `(int) pos_y`, `(double) scale`, `(long) user_structure_id`
+
+* gs_flip_structure - `Flips a structure`
+  * params: `(long) user_structure_id`, `(bool) flipped`
 
 ## Island (All of these require params)
 
 * gs_change_island - `Changes current Island`
-  * params: `(int) user_island_id`
+  * params: `(long) user_island_id`
 
-* gs_buy_island - `Buys Island`
+* gs_buy_island - `Buys an Island`
   * params: `(int) island_id`
 
-* gs_save_island_warp_speed - `Saves Island Time Machine Speed`
-  * params: `(int) user_island_id`, `(double) warp_speed`
+* gs_save_island_warp_speed - `Saves an Islands Time Machine Speed`
+  * params: `(long) user_island_id`, `(double) warp_speed`
 
 * gs_refresh_tribe_requests - `Refreshes users Tribe join requests`
 
@@ -133,14 +138,14 @@ Requests
 * gs_purchase_scratch_off - `Purchases a round of the Scratch Minigame`
   * params: `(utf-string) type`, `(bool) requestFree`
 
-* gs_collect_scratch_off
+* gs_collect_scratch_off - `Collects Scratch Minigame Rewards`
   * params varie depending on `type`
 
 ## Account (Most of these require params)
 
-* gs_set_displayname
+* gs_set_displayname - `Sets Players Display Name`
  
-* gs_player - `Sends player data`
+* gs_player - `Sends Player Data`
   * No Params
 
 ## Settings (All of these require params)
