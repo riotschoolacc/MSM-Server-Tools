@@ -3,7 +3,6 @@ Requests
 
 * All requests are sent with atleast one (but not required) param, `(Long) last_updated`, which is the `(Long) last_updated` in their cached version.
 
-
 ## Loading Screen Requests (None of these *require* params)
 
 * db_monster
@@ -59,30 +58,27 @@ Requests
 
 * test_types - `responds with a test of all SFS Types`
 
-
 # Ingame Requests
-
-
 
 ## Eggs (All of these require params)
 
 * gs_buy_egg
 
- * params: `(int) monster_id,` (not required) `(bool) starpower_purchase`
+  * params: `(int) monster_id,` (not required) `(bool) starpower_purchase`
 
 * gs_hatch_egg
 
- * params: `(int) user_egg_id`
+  * params: `(int) user_egg_id`
 
 * gs_sell_egg
 
- * params: `(int) user_monster_id`
+  * params: `(int) user_monster_id`
 
 ## Monster (All of these require params)
 
 * gs_sell_monster
 
- * params: `(int) user_monster_id`
+  * params: `(int) user_monster_id`
 
 * gs_rename_monster
 
@@ -94,4 +90,4 @@ Requests
 
 * gs_sell_structure
  
- * params: `(int) user_structure_id`
+  * params: `(int) user_structure_id`
