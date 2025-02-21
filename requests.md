@@ -1,6 +1,10 @@
+Requests
+-
+
 * All requests are sent with atleast one (but not required) param, `(Long) last_updated`, which is the `(Long) last_updated` in their cached version.
 
-# Loading Screen Requests (None of these *require* params)
+
+## Loading Screen Requests (None of these *require* params)
 
 * db_monster
 
@@ -73,7 +77,7 @@
 
  * params: `(int) user_monster_id`
 
-## Monster
+## Monster (All of these require params)
 
 * gs_sell_monster
 
@@ -83,7 +87,7 @@
 
 * gs_move_monster
 
-## Structure
+## Structure (All of these require params) 
 
 * gs_buy_structure
 
