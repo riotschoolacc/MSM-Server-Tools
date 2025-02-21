@@ -28,9 +28,11 @@ Tools for interacting with the MSM (My Singing Monsters) Servers made with ease 
 
 Settings
 ------
-In MSM Server Tools there are multiple settings you can customize, for example, if you want to connect to your own custom server, set the custom server ip to for example `127.0.0.1` (localhost), default: `null`.
+In MSM Server Tools there are multiple settings you can customize.
 
-Or, you can set your port to what your server supports, default: `9933`.
+For example, if you want to connect to your own custom server, set the custom server ip to, for example, `127.0.0.1` (localhost), *default: `null`*.
+
+Or, you can set your port to what your server supports, *default: `9933`*.
 
 You can find a full list of settings **[here](#list-of-settings).**
 
@@ -39,21 +41,31 @@ You can find a full list of settings **[here](#list-of-settings).**
 
 Authorization
 ------
-In My Singing Monsters, before anything happens, the client sends a request to **https://auth.bbbgame.net/auth/api/token/** which in turn gives you your User Game ID (`user_game_id`) and most importantly, your *authorization token* (`token`). 
+In My Singing Monsters, before anything happens, the client sends a request to **https://auth.bbbgame.net/auth/api/token/**.
 
-In MSM Server Tools you will click Authorization before you can do anything else and it'll create a new account by sending a request to **https//auth.bbbgame.net/auth/api/anon_account** which creates a new *anonymous* account, and responds with a Username, Password, Account ID, User Game ID & Authorization Token. I'm not sure why there's 3 things for account identification.
+Which in turn will send back:
 
-One of the params MSM sends to the URL is G (Game ID), Mobile MSM Servers are `1`, 
+* your User Game ID (`user_game_id`)
+* And most importantly, your *authorization token* (`token`). 
 
-and PC MSM Servers are `27`,
+Yu will click Authorization before you can do anything else and it'll create a new account by sending a request to **https//auth.bbbgame.net/auth/api/anon_account** which creates a new *anonymous* account, and responds with a Username, Password, Account ID, User Game ID & Authorization Token. 
 
-another is T (Login Type),
+I'm not sure why there's 3 things for account identification (*Account ID, User Game ID, & Username*).
 
-Email = `email`, 
+One of the params MSM sends to the URL is `g` (Game ID)
 
-Anonymous = `anon` 
+| Game | ID |
+| --- | --- |
+| MSM Mobile | `1` |
+| MSM Steam | `27` |
 
-& Game Center = `gc`.
+another is `t` (Login Type)
+
+| Login Type | ID |
+| --- | --- |
+| Email | `email` |
+| Anonymous | `anon` |
+| Game Center | `gc` |
 
 > [!WARNING]
 > You will need to re-authenticate every 10 minutes due to there being an Expiration Time inside the Token.
@@ -80,19 +92,20 @@ Once the Server IP is located, you should in MSM Server Tools click *Server Logi
 To connect to the Server using the responded IP or [Custom Server IP](#settings) and port `9933` (Default Smartfox2x port and the one MSMs Servers Use) or the [Custom Server Port](#settings). If it is successful, MSM Server Tools will send a Login Request to the server,
 
 with params:
-Zone: `My Singing Monsters` or your [Custom Zone](#settings),
 
-Username which is the `user_game_id` from the Auth Request,
+| Name | Description | Type |
+| --- | --- | --- |
+| `zone` | `My Singing Monsters` or your [Custom Zone](#settings) | `Utf-String` |
+| `username` | the `user_game_id` from the Auth Request | `Utf-String` |
+| `password` | the `password` from the Auth Request | `Utf-String` |
 
-Password which is the `password` from the Auth Request,
+*and auth_info, which is an [SFSObject](https://docs2x.smartfoxserver.com/api-docs/javadoc/server/com/smartfoxserver/v2/entities/data/SFSObject.html) with params:
 
-and auth_info, which is an [SFSObject](https://docs2x.smartfoxserver.com/api-docs/javadoc/server/com/smartfoxserver/v2/entities/data/SFSObject.html) with params:
-
-Auth Token (`token`): which is the responded `token` from a request to **https://auth.bbbgame.net/auth/api/token/** with most params being the response from the original Auth Request.
-
-Access Key (`access_key`) which is a hardcoded key inside the My Singing Monsters EXE. It changes every version.
-
-Client Version (`client_version`) which is the [current version of My Singing Monsters](https://mysingingmonsters.fandom.com/wiki/Version_History).
+| Name | Description | Type |
+| --- | --- | --- |
+| `token` | the responded `token` from a request to **https://auth.bbbgame.net/auth/api/token/** with most params being the response from the original Auth Request. | `Utf-String` |
+| `access_key` | a hardcoded key inside the My Singing Monsters EXE. | `Utf-String` |
+| `client_version` | the [current version of My Singing Monsters](https://mysingingmonsters.fandom.com/wiki/Version_History). | `Utf-String` |
 
 > [!WARNING]
 > You will need to click Login every few minutes to ensure you don't get kicked for being idle
@@ -101,7 +114,7 @@ Loading Screen
 ------
 To be able to do any ingame (*after loading screen*) requests you have to go through the Loading Screen requests (for some reason, or else it yields on requests that aren't in the Loading Screen). 
 
-So, you can automatically do it without the hassle of manually typing all 30 request commands by clicking Loading Screen! You are given the option to download all responses into a folder if you want. Afterwards, you can do all requests.
+So, you can automatically do it without the hassle of manually typing all the request commands by clicking Loading Screen! You are given the option to download all responses into a folder if you want. Afterwards, you can do all requests.
 
 Requests
 ------
