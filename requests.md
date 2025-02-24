@@ -135,7 +135,7 @@ Requests
   
   ## Minigame (Most of these require params)
   
-  * gs_player_has_scratch_off - `Checks if player is able to play Scratch Minigame`
+  * gs_player_has_scratch_off - `Checks if the player can play Scratch Minigame`
     * params: `(utf-string) type`
   
   * gs_play_scratch_off - `Sends Scratch Minigame data`
@@ -145,14 +145,19 @@ Requests
     * params: `(utf-string) type`, `(bool) requestFree`
   
   * gs_collect_scratch_off - `Collects Scratch Minigame Rewards`
-    * params varie depending on `type`
+    * params vary depending on `type`
   
   ## Account (All of these require params)
   
   * gs_set_displayname - `Sets Players Display Name`
     * params: `(utf-string) newName`
   
-  ## Settings Page (All of these require params
+  ## Settings Page (All of these require params)
+
+  * gs_referral_request - `Sends a Referral Request`
+    * params: `(long) referring_bbb_id`
+
+  ## Other
   
   * gs_get_code - `Not Sure`
     * params: `(utf-string) code` **Must have "R:" at the start**
