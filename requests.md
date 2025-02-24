@@ -152,7 +152,7 @@ Requests
   * gs_set_displayname - `Sets Players Display Name`
     * params: `(utf-string) newName`
   
-  ## Settings Page (All of these require params)
+  ## Settings Page (All of these require params
   
-  * gs_get_code - `For sending referral codes`
+  * gs_get_code - `Not Sure`
     * params: `(utf-string) code` **Must have "R:" at the start**
