@@ -25,6 +25,8 @@ Requests
 
 * gs_epic_monster_data - `Sends all Monsters that are Epic`
 
+* db_store_v2 - `Sends all Market Data`
+
 * db_flexeggdefs - `Sends all Flex Egg Data`
 
 * gs_flip_boards - `Sends all Memory Minigame Boards`
@@ -51,14 +53,6 @@ Requests
 
 * gs_player - `Sends Player Data`
 
-# Other Loading Screen Requests that aren't requested
-
-* db_level - `Sends all Level data`
-
-* gs_sticker - `Sends all Avatar data`
-
-* gs_quest - `Sends all Quests the player hasn't completed`
-
 # Test Requests (None of these *require* params)
 
 * test_types - `Sends a test of all SFS Types`
@@ -67,7 +61,18 @@ Requests
 
 * gs_island (First version of *gs_island_v2*) - `Sends all Island Data`
 
+* db_store (First version of *db_store_v2*) - `Sends all Market Data`
+
 # Ingame Requests
+
+* db_level - `Sends all Level Data`
+
+* gs_sticker - `Sends all Avatar Icons Data`
+
+* gs_quest - `Sends all Quests the player hasn't completed`
+
+* gs_get_code - `Not Sure`
+  * params: `(utf-string) code` **Must have "R:" at the start**
   
   ## Eggs (All of these require params)
   
@@ -132,6 +137,9 @@ Requests
     * params: `(long) user_island_id`, `(double) warp_speed`
   
   * gs_refresh_tribe_requests - `Refreshes users Tribe join requests`
+
+  * gs_place_on_tribal - `Places Monster on Tribal Island`
+    * params: `(long) user_monster_id`, `(long) member_id`, `(int) pos_x`, `(int) pos_y`, `(int) chief`, (not required) `(int) user_id`
   
   ## Minigame (Most of these require params)
   
@@ -151,13 +159,11 @@ Requests
   
   * gs_set_displayname - `Sets Players Display Name`
     * params: `(utf-string) newName`
-  
-  ## Settings Page (All of these require params)
 
+  ## Friends (All of these require params)
+
+  * gs_transfer_code - `Sends Key to Friend`
+    * params: `(long) user_id`
+  
   * gs_referral_request - `Sends a Referral Request`
     * params: `(long) referring_bbb_id`
-
-  ## Other
-  
-  * gs_get_code - `Not Sure`
-    * params: `(utf-string) code` **Must have "R:" at the start**
